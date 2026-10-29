@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "japaneselearning",
+	"version": "${version}",
+	"name": "Japanese Learning",
+	"description": "Learn Japanese while playing Minecraft.",
+	"authors": [
+		"Matthew Tseng"
+	],
+	"license": "All-Rights-Reserved",
+	"icon": "assets/japaneselearning/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.matthewtseng.japaneselearning.JapaneseLearning"
+		],
+		"client": [
+			"com.matthewtseng.japaneselearning.client.JapaneseLearningClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "japaneselearning.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
